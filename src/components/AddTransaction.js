@@ -6,7 +6,7 @@ import { GlobalContext } from "../context/GlobalState";
 //we set our state onChange with the event listener which updates the state every time there is a change
 export const AddTransaction = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
 
   const { addTransaction } = useContext(GlobalContext);
 
@@ -20,6 +20,8 @@ export const AddTransaction = () => {
     };
 
     addTransaction(newTransaction);
+    setText("");
+    setAmount("");
   };
 
   return (

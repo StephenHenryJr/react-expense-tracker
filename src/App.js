@@ -17,7 +17,7 @@ function App() {
   };
   return (
     <GlobalProvider>
-      <Header header="Expense Tracker" />
+      <Header header="Expense Tracker" style={{color: "red", fontSize: '26px'}}/>
       <div className={`container ${darkMode ? 'dark-mode' : ''}`}>
       <DarkMode darkMode={darkMode} toggleIcon={toggleIcon}/>
         <Balance />
